@@ -50,6 +50,19 @@ extension ViewController: UIPickerViewDataSource,UIPickerViewDelegate{
         lbl_mood.alpha = 1
         lbl_mood.text = moodArray[row]
         view_container.alpha = 0
+        
+        var newbackground : UIColor
+        switch row {
+        case 0,3,4,5,8:
+            newbackground = UIColor.yellow
+        case 1,2:
+            newbackground = UIColor.darkGray
+        case 6,7,9:
+            newbackground = UIColor.lightGray
+        default:
+            newbackground = UIColor(red: 200/255, green: 255/255, blue: 200/255, alpha: 1.0)
+        }
+        self.view.backgroundColor = newbackground
     }
 }
 
